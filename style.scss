@@ -20,6 +20,7 @@ body {
     --bg-task-color: #2a2a2a;
     --bg-button-color: #1a1a1a;
     --delete-color: #ff4d4d;
+    --count-color: #ed1c1c;
 
     // Padding Variable
     --nav-padding: 15px 30px;
@@ -68,6 +69,9 @@ main {
 nav {
     padding: var(--nav-padding);
     @include space-between();
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color);
 
     button {
         background-color: var(--bg-button-color);
@@ -90,6 +94,7 @@ section {
     .task-column {
         background-color: var(--bg-button-color);
         flex-grow: 1;
+        width: 100%;
         padding: var(--padding-m);
         @include column();
         gap: var(--padding-m);
@@ -127,6 +132,16 @@ section {
     .hover-over {
         border: 2px dashed var(--primary-text-color);
         scale: 1.05;
+    }
+
+    .left {
+        font-weight: 700;
+    }
+
+    .right {
+        background-color: var(--count-color);
+        padding: var(--padding-s) var(--padding-m);
+        border-radius: var(--border-radius-m);
     }
 }
 
